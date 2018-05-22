@@ -11,8 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-//
-// Traveling Salesman Sample.
+// Traveling Salesman Problem.
 //
 // This is a sample using the routing library to solve a Traveling Salesman
 // Problem.
@@ -20,10 +19,10 @@
 // http://en.wikipedia.org/wiki/Travelling_salesman_problem.
 // For small problems one can use the hamiltonian path library directly (cf
 // graph/hamiltonian_path.h).
-// The optimization engine uses local search to improve solutions, first
-// solutions being generated using a cheapest addition heuristic.
-// Optionally one can randomly forbid a set of random connections between nodes
-// (forbidden arcs).
+// The optimization engine finds the optimal solution.
+// For larger problems, it is possible to use local search to improve solutions, first
+// solutions being generated using some heuristic (e.g. cheapest addition).
+
 
 #include <memory>
 
