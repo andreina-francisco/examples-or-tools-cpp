@@ -95,8 +95,10 @@ namespace operations_research {
 
 			//  Solution inspection
 			if (solution != NULL) {
-				std::cout << "Cost: " << solution->ObjectiveValue() << std::endl;
+				std::cout << "Total cost: " << solution->ObjectiveValue() << std::endl;
 				for (int64 route_number = 0; route_number < num_routes; route_number++) {
+					std::cout << "Route " << route_number << ": ";
+
 					for (int64 index = routing.Start(route_number); !routing.IsEnd(index);
 						index = solution->Value(routing.NextVar(index))) {
 						std::cout << city_names[routing.IndexToNode(index).value()] << " -> ";
